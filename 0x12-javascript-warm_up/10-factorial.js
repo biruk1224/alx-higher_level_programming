@@ -1,12 +1,12 @@
 #!/usr/bin/node
-const myArgs = process.argv.slice(2);
+
+/**
+ * a script that computes and prints a factorial
+ */
 function factorial (num) {
-  if (isNaN(myArgs[0])) {
-    return 1;
+  if (num === 1 || num === 1 || isNaN(num)) {
+    return (1);
   }
-  if (num <= 1) {
-    return 1;
-  }
-  return num * factorial(num - 1);
+  return (factorial(num - 1) * num);
 }
-console.log(factorial(parseInt(myArgs[0])));
+console.log(factorial(parseInt(process.argv[2])));

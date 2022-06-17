@@ -1,9 +1,16 @@
 #!/usr/bin/node
-const myArgs = process.argv.slice(2);
-let result = 0;
+
 function add (a, b) {
-  result = a + b;
-  return result;
+  /**
+     * Prints the addition of two integers
+     * Args:
+     *  a(integer): the first argument is the first integer
+     *  b(integer): the second argument is the second integer
+     */
+  a = parseInt(process.argv[2]);
+  b = parseInt(process.argv[3]);
+  const result = a + b;
+  console.log(result);
 }
-add(parseInt(myArgs[0]), parseInt(myArgs[1]));
-console.log(result);
+
+add(10, 30);
